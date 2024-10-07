@@ -1,0 +1,27 @@
+.photo-container {
+    margin: 20px 0;
+}
+
+.profile-photo {
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+h2 {
+    color: #333;
+    margin-top: 15px; /* Space above headings */
+}
+
+ul {
+    list-style-type: square; /* Using square list icons */
+    padding: 0;
+    text-align: left; /* Align text to the left for readability */
+    display: inline-block; /* Center the list */
+}
+
+li {
+    margin: 10px 0; /* Space between list items */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
