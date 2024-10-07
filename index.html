@@ -1,65 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sara Hussain - Personal Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Include the previous CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f0f0f0; /* Light gray background */
+}
 
-        /* Accordion styles */
-        .accordion {
-            background-color: #f1f1f1;
-            color: #444;
-            cursor: pointer;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 16px;
-            transition: background-color 0.3s;
-            margin: 5px 0;
-            border-radius: 5px;
-        }
+header {
+    background-color: #0077cc; /* Blue header */
+    color: white; /* White text for contrast */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Rounded corners */
+}
 
-        .accordion.active, .accordion:hover {
-            background-color: #e2e2e2;
-        }
+.photo-container {
+    margin: 20px 0;
+}
 
-        .panel {
-            padding: 0 10px;
-            display: none;
-            overflow: hidden;
-            background-color: white;
-            border-radius: 0 0 5px 5px;
-            margin-bottom: 10px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Sara Hussain</h1>
-        <p><a href="mailto:saranhussain@lewis.edu">saranhussain@lewis.edu</a></p>
-        <p>Discord: saraaa_.006</p>
-    </header>
-    
-    <div class="photo-container">
-        <img src="me.png" alt="Sara Hussain" style="width:200px;" class="profile-photo"> 
-    </div>
+.profile-photo {
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
 
-    <div class="container">
-        <section>
-            <button class="accordion">Introduction</button>
-            <div class="panel">
-                <p>I am a freshman majoring in cybersecurity. I come from a family of 5 and was born in Illinois.</p>
-            </div>
-        </section>
+h2 {
+    color: #333;
+    margin-top: 15px; /* Space above headings */
+}
 
-        <section>
-            <button class="accordion">What I Hope to Learn in this Course</button>
-            <div class="panel">
-                <ul>
-                    <li>I hope to learn multiple programming languages.</li>
-                    <li>I ho
+ul {
+    list-style-type: square; /* Using square list icons */
+    padding: 0;
+    text-align: left; /* Align text to the left for readability */
+    display: inline-block; /* Center the list */
+}
+
+li {
+    margin: 10px 0; /* Space between list items */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+li:hover {
+    background-color: #e6f7ff; /* Light blue background on hover */
+    padding: 5px; /* Slight padding on hover for effect */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+a {
+    color: #0077cc; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+a:hover {
+    color: #005fa3; /* Darker blue on hover */
+}
