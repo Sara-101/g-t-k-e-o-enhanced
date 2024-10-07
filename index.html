@@ -6,44 +6,35 @@
     <title>Sara Hussain - Personal Page</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+        /* Include the previous CSS styles here */
+
+        /* Accordion styles */
+        .accordion {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            margin: 5px 0;
+            border-radius: 5px;
         }
-        header {
-            text-align: center;
-            margin-bottom: 20px;
+
+        .accordion.active, .accordion:hover {
+            background-color: #e2e2e2;
         }
-        .photo-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .profile-photo {
-            border-radius: 50%;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        section {
-            flex: 1 1 45%; /* Adjusts to take up about 45% of the row */
-            margin: 10px;
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            margin-top: 0;
-        }
-        @media (max-width: 768px) {
-            section {
-                flex: 1 1 100%; /* Stacks sections on smaller screens */
-            }
+
+        .panel {
+            padding: 0 10px;
+            display: none;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 0 0 5px 5px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -60,31 +51,55 @@
 
     <div class="container">
         <section>
-            <h2>Introduction</h2>
-            <p>I am a freshman majoring in cybersecurity. I come from a family of 5 and was born in Illinois.</p>
+            <button class="accordion">Introduction</button>
+            <div class="panel">
+                <p>I am a freshman majoring in cybersecurity. I come from a family of 5 and was born in Illinois.</p>
+            </div>
         </section>
 
         <section>
-            <h2>What I Hope to Learn in this Course</h2>
-            <ul>
-                <li>I hope to learn multiple programming languages.</li>
-                <li>I hope to learn more about Artificial Intelligence and its uses.</li>
-                <li>I hope to fully understand Abstraction.</li>
-            </ul>
+            <button class="accordion">What I Hope to Learn in this Course</button>
+            <div class="panel">
+                <ul>
+                    <li>I hope to learn multiple programming languages.</li>
+                    <li>I hope to learn more about Artificial Intelligence and its uses.</li>
+                    <li>I hope to fully understand Abstraction.</li>
+                </ul>
+            </div>
         </section>
 
         <section>
-            <h2>My Favorite Hobby / Activity</h2>
-            <ul>
-                <li>I like to cook and bake in my spare time. <a href="https://cooking.nytimes.com/68861692-nyt-cooking/1685992-best-fall-recipes">Learn more</a></li>
-                <li>I like to travel and experience different cultures, foods, fashion, etc. <a href="https://www.harpersbazaar.com/culture/travel-dining/g7171/most-beautiful-places-in-the-world/">Learn more</a></li>
-            </ul>
+            <button class="accordion">My Favorite Hobby / Activity</button>
+            <div class="panel">
+                <ul>
+                    <li>I like to cook and bake in my spare time. <a href="https://cooking.nytimes.com/68861692-nyt-cooking/1685992-best-fall-recipes">Learn more</a></li>
+                    <li>I like to travel and experience different cultures, foods, fashion, etc. <a href="https://www.harpersbazaar.com/culture/travel-dining/g7171/most-beautiful-places-in-the-world/">Learn more</a></li>
+                </ul>
+            </div>
         </section>
 
         <section>
-            <h2>Fun Fact</h2>
-            <p>I have been to 12 different U.S states.</p>
+            <button class="accordion">Fun Fact</button>
+            <div class="panel">
+                <p>I have been to 12 different U.S states.</p>
+            </div>
         </section>
     </div>
+
+    <script>
+        // Accordion functionality
+        const accordions = document.getElementsByClassName("accordion");
+        for (let i = 0; i < accordions.length; i++) {
+            accordions[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
