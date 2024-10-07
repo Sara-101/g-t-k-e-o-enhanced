@@ -1,59 +1,116 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
-    background-color: #f0f0f0; /* Light gray background */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara Hussain - Personal Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .photo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .profile-photo {
+            border-radius: 50%;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        section {
+            flex: 1 1 45%; /* Adjusts to take up about 45% of the row */
+            margin: 10px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-top: 0;
+        }
+        @media (max-width: 768px) {
+            section {
+                flex: 1 1 100%; /* Stacks sections on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sara Hussain</h1>
+        <p><a href="mailto:your-email@lewis.edu">saranhussain@lewisu.edu</a></p>
+        <p><a href="mailto:saranhussain@lewis.edu">saranhussain@lewis.edu</a></p>
+        <p>Discord: saraaa_.006</p>
+    </header>
 
-header {
-    background-color: #0077cc; /* Blue header */
-    color: white; /* White text for contrast */
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px; /* Rounded corners */
-}
+    <div class="photo-container">
+        <img src="me.png" alt="Sara Hussain" style="width:200px;"class="profile-photo"> 
+       
+        <img src="me.png" alt="Sara Hussain" style="width:200px;" class="profile-photo"> 
+    </div>
 
-.photo-container {
-    margin: 20px 0;
-}
+    <section>
+        <h2>Introduction</h2>
+        <p>I am a freshman majoring in cybersecurity. I come from a family of 5 and was born in Illinois .</p>
+    </section>
+    <div class="container">
+        <section>
+            <h2>Introduction</h2>
+            <p>I am a freshman majoring in cybersecurity. I come from a family of 5 and was born in Illinois.</p>
+        </section>
 
-.profile-photo {
-    width: 200px; /* Adjust the size as needed */
-    height: auto;
-    border-radius: 50%; /* Makes the image circular */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-}
+    <section>
+        <h2>What I Hope to Learn in this Course</h2>
+        <ul>
+            <li>I hope to learn multiple programming languages.</li>
+            <li>I hope to learn more about Artificial Intelligence and it's uses.</li>
+            <li>I hope to fully understand Abstraction</li>
+        </ul>
+    </section>
+        <section>
+            <h2>What I Hope to Learn in this Course</h2>
+            <ul>
+                <li>I hope to learn multiple programming languages.</li>
+                <li>I hope to learn more about Artificial Intelligence and its uses.</li>
+                <li>I hope to fully understand Abstraction.</li>
+            </ul>
+        </section>
 
-h2 {
-    color: #333;
-    margin-top: 15px; /* Space above headings */
-}
+    <section>
+        <h2>My Favorite Hobby / Activity</h2>
+        <ul>
+            <li>I like to cook and bake in my spare time<a href="hhttps://cooking.nytimes.com/68861692-nyt-cooking/1685992-best-fall-recipes">Learn more</a></li>
+            <li>I like to travel and experience different cultures, foods, fashion, etc. <a href="https://www.harpersbazaar.com/culture/travel-dining/g7171/most-beautiful-places-in-the-world/">Learn more</a></li>
+        </ul>
+    </section>
+        <section>
+            <h2>My Favorite Hobby / Activity</h2>
+            <ul>
+                <li>I like to cook and bake in my spare time. <a href="https://cooking.nytimes.com/68861692-nyt-cooking/1685992-best-fall-recipes">Learn more</a></li>
+                <li>I like to travel and experience different cultures, foods, fashion, etc. <a href="https://www.harpersbazaar.com/culture/travel-dining/g7171/most-beautiful-places-in-the-world/">Learn more</a></li>
+            </ul>
+        </section>
 
-ul {
-    list-style-type: square; /* Using square list icons */
-    padding: 0;
-    text-align: left; /* Align text to the left for readability */
-    display: inline-block; /* Center the list */
-}
-
-li {
-    margin: 10px 0; /* Space between list items */
-    transition: background-color 0.3s; /* Smooth background color transition */
-}
-
-li:hover {
-    background-color: #e6f7ff; /* Light blue background on hover */
-    padding: 5px; /* Slight padding on hover for effect */
-    border-radius: 5px; /* Rounded corners on hover */
-}
-
-a {
-    color: #0077cc; /* Link color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth color transition */
-}
-
-a:hover {
-    color: #005fa3; /* Darker blue on hover */
-}
+    <section>
+        <h2>Fun Fact</h2>
+        <p>I have been to 12 different U.S states.</p>
+    </section>
+        <section>
+            <h2>Fun Fact</h2>
+            <p>I have been to 12 different U.S states.</p>
+        </section>
+    </div>
+</body>
+</html>
